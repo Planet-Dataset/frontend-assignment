@@ -11,7 +11,7 @@ As a Front-End developer in Planet Dataset, you will be asked to participate in 
 and implementation of new features that will be used in our price-management platform for
 eCommerce.
 
-New features usually involves implementing an interface to configure the user's preferences.
+New features usually involve implementing an interface to configure the user's preferences.
 However, we also implement extensions in the Shopify ecosystem; so you can expect to encounter
 Liquid source files, HTML and webcomponents in part of the development process.
 
