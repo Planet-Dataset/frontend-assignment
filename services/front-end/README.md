@@ -2,31 +2,21 @@
      alt="planet-logo-white-no-bg"
      width="240">
 
-# Planet fullstack-assignment - Front-end project
-Full-Stack position skill assessment home assignment.
+# Planet frontend-assignment - Front-end project
+Front-End position skill assessment home assignment.
 
 ## Context
-As a Full-Stack developer in Planet Dataset, you will be asked to participate in the design
-and implementation of new features that will be used in our price-management platform for
-eCommerce.
+As a Front-End developer in Planet Dataset, you will be asked to participate in the design and implementation of new features that will be used in our price-management platform for eCommerce.
 
-New features are geared towards automations and, in our pletform, developing them usually
-involves three different tasks:
-1. Implementing an interface to configure the user's preferences.
-2. Implementing API endpoints to retrieve data such as result examples.
-3. Implementing asyncronous tasks that apply the changes to our clients' stores.
-
-This is the workflow that we tried to replicate in this task. The theme is forex analysis,
-and we will require you to implement an API call to retrieve currencies from the database,
-an asynchronous task to retrieve the data from an external API, and the interface to subscribe
-and list different currencies.
+New features usually involve implementing an interface to configure the user's preferences. However, we also implement extensions in the Shopify ecosystem; so you can expect to encounter Liquid source files, HTML and webcomponents in part of the development process.
 
 ## Overview
-![image](https://user-images.githubusercontent.com/28607713/212686851-36002b8f-d2e6-46ef-a5c8-3da98041f302.png)
+![image](https://user-images.githubusercontent.com/28607713/220129000-b6df3779-92ae-463e-8929-460b47881aaa.png)
+
 
 
 This is a basic Angular 14 project that was generated with [Angular CLI](https://github.com/angular/angular-cli). It is provided
-as a template in case you want a jumpstart. It already has a `forex` module with routing and localization in place so that you
+as a template in case you want a jumpstart. It already has a `dashboard` module with routing and localization in place so that you
 can implement there the UI.
 
 The following libraries are included in case you want to use it:
@@ -44,11 +34,11 @@ The following libraries are included in case you want to use it:
 
 - `src/app/features` - Folder with Angular modules for each feature. We understand that a feature is an independent bulk of functionality that has its own routing. 
 
-- `src/app/features/forex` - Angular module for the forex feature. It is where we propose you to implement the solution
+- `src/app/features/dashboard` - Angular module for the dashboard feature. It is where we propose you to implement the solution
 
-- `src/app/features/forex/i18n` - Translations for the forex module
+- `src/app/features/dashboard/i18n` - Translations for the dashboard module
 
-- `src/app/features/forex/pages` - Folder with the forex page component
+- `src/app/features/dashboard/pages` - Folder with the dashboard page component
 
 - `src/app/features/home` - Angular module for the landing page
 
