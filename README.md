@@ -52,25 +52,6 @@ PS: We provide this structure as a starting point but you may discard it and app
 any other way.
 
 ## The problem
-The solution you are required to design and implement is geared towards collecting historic exchange
-prices from the currencies the API user wants to EUR. With this in mind we need a system that provides
-an API for adding, removing and listing the currencies that are being followed at the moment, and an
-additional endpoint for retrieving such historic data.
-
-We already provide the endpoints for managing subscriptions so you can focus on the use case of fetching,
-saving and showing historical data.
-
-The workflow that the system should support is:
-1. The API user adds or removes currencies from the followed ones, by the currency code.
-2. The API user is able to see the followed currencies using the corresponding endpoint
-3. The system, periodically, fetches the stock exchange price from each followed currency to Euros (EUR).
-4. The user can see the historical data for the followed currencies, which
-     includes basic data such as ask, bid, and spread; and additional calculated stats.
-
-> We recommend using the [alphavantage API](https://www.alphavantage.co/) for retrieving the data as
-> it is free and the endpoint for retrieving the data is well documented and easy to use.
-> _See the docs: [https://www.alphavantage.co/documentation/#fx-daily](https://www.alphavantage.co/documentation/#fx-daily)_
-
 #### What we want
 We provide you with two basic endpoints for retrieving the data and sending post creation requests:
 
