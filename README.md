@@ -103,6 +103,9 @@ We provide you with Makefile rules for you to lift individual services:
      - `frontend-build` Builds the corresponding app dist files.
      - `frontend-dev` Runs the front-end service locally (accessible at http://localhost:4200). _It will install the dependencies (requires having a local installation of node)._
 
+## Data
+Data sample was obtained from https://www.reddit.com/r/linux.json
+
 # frontend-assignment
 Front-End position skill assessment home assignment.
 
