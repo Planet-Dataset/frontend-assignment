@@ -1,0 +1,14 @@
+version: '3.3'
+services:
+  api:
+    image: home-assignment-api
+    container_name: home-assignment-api
+    build:
+      context: ./services/api
+      dockerfile: ./Dockerfile
+    command: sh -c "yarn start"
+    ports:
+      - "8080:8080"
+    volumes:
+      - ./services/api/src:/app/src
+      - ./data:/data
