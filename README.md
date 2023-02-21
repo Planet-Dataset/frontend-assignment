@@ -55,8 +55,20 @@ any other way.
 #### What we want
 We provide you with two basic endpoints for retrieving the data and sending post creation requests:
 
-- `[POST] /api/posts` Create a new post
-- `[GET] /api/posts` Get existing posts
+- `[POST] /api/posts` Create a new post from existing one
+     
+     ```
+     HTTP POST Body:
+     {
+          "author": string!,
+          "author_fullname": string?,
+          "categroy": string?
+          "language": string!
+          "originalPostId": string!
+          "title": string!
+     }
+     ```
+- `[GET] /api/posts?limit=number&page=number` Get existing posts (supports pagination in the specified format)
 
 We want a view that lists the existing posts with a summary of the details and the possibility of seeing
 more information; in addition to this, it should allow creating new posts based on a chosen one.
