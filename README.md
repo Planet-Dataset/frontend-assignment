@@ -11,25 +11,33 @@ As a Front-End developer in Planet Dataset, you will be asked to participate in 
 and implementation of new features that will be used in our price-management platform for
 eCommerce.
 
-New features usually involve implementing an interface to configure the user's preferences.
-However, we also implement extensions in the Shopify ecosystem; so you can expect to encounter
-Liquid source files, HTML and webcomponents in part of the development process.
+New features usually involve implementing new views in our platform to allow users configuring
+automations, and other interface elements that distributed to the Shopify ecosystem. Therefore,
+you can expect to encounter Angular projects, design systems, Liquid source files, HTML and
+webcomponents as part of your daily the development process.
 
 ## Overview
-We provide you with a project that has a working API and a web app.
+This assignment is set in a fictitious content management company that provides translation services
+to post creators in Reddit. The common workflow is reading through a list of pending posts, creating
+a new one based on the original, translate it, and upload it.
 
-This project has part of the functionality of fictitious software solution that provides an
-administration dashboard for a Reddit translation company. The company is encharged of making
-post translations for existing ones: this is done by choosing of one of the remaining posts
-and creating a new one based on it.
+You are asked to implement the part of the functionality of a web platform that will allow employees
+to manage the work.
 
-You are responsible of finishing the app by implementing a dashboard page that:
-- Lists current posts.
-- Looking at specific details of a post, so that the worker can prioritize which one to choose next.
+The project is already setup with a working API and a web app. Your task is to implement the necessary
+interface to list current posts and create a new one based on the original. The scope of the assignment
+is limited to this and does not include editing posts.
+
+More specificly, the interface should allow:
+- Lists current posts, distinguishing between original and the company's translated ones.
+- Looking at specific details of a post (regarding metadata, not the actual content), so that employees
+  can prioritize which one to choose next.
 - A form to create a new post translation (a new post based on the existing one).
 
 ## About this repository
-This repository holds the basic project structure for implementing an Angular web app.
+This repository holds the basic project structure of an Angular web app with its corresponding API.
+The API is containerized and the front-end is locally developed. We also provide you with Makefiles
+to raise each of the services.
 
 The code is organized as follows:
 
@@ -78,8 +86,8 @@ Here is a mockup of it could look, although you are free to design it however yo
 
 
 #### What we will evaluate
-- Whether the interface fulfills the functional requirements: it shows the current currency subscriptions along with
-  their data, and it allows adding or removing subscriptions.
+- Whether the interface fulfills the functional requirements: it shows the posts, distinguishes between original
+  and user-created ones, and allows making POST requests for post creation.
 - How functionality is organized though components and services.
 - Efective use of Angular life cycle hooks to perform data subscription and tearing.
 - A coherent implementation of the interface that involves a limited number of spaces, fonts and colors; and the use
@@ -98,6 +106,9 @@ We provide you with Makefile rules for you to lift individual services:
 
 ## Data
 Data sample was obtained from https://www.reddit.com/r/linux.json
+You can find a backup copy at `data/linux.json`.
+We have added an additional `originalPost` that set to the original post for which the translation is created;
+you can use this to distinguish between original and user-created ones.
 
 # frontend-assignment
 Front-End position skill assessment home assignment.
