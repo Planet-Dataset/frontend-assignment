@@ -82,7 +82,8 @@ We want a view that lists the existing posts with a summary of the details and t
 more information; in addition to this, it should allow creating new posts based on a chosen one.
 Here is a mockup of it could look, although you are free to design it however you feel it works best.
 
-![image](https://user-images.githubusercontent.com/28607713/212859859-462fe5b8-e05f-4332-a5ee-098500a78418.png)
+![image](https://user-images.githubusercontent.com/28607713/220557194-c60fecd0-74ed-4e51-94f0-6edcfcbfd851.png)
+
 
 
 #### What we will evaluate
