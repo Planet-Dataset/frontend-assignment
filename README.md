@@ -108,8 +108,9 @@ We provide you with Makefile rules for you to lift individual services:
 ## Data
 Data sample was obtained from https://www.reddit.com/r/linux.json
 You can find a backup copy at `data/linux.json`.
-We have added an additional `originalPost` that set to the original post for which the translation is created;
-you can use this to distinguish between original and user-created ones.
+We have added an additional `original_post_id` that set to the original post for which the translation is created
+you can use this to distinguish between original and user-created ones. We also have added `language` which is set to "EN" by default
+useful to reference the language in which the post has been written
 
 # frontend-assignment
 Front-End position skill assessment home assignment.
