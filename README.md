@@ -95,15 +95,28 @@ Here is a mockup of it could look, although you are free to design it however yo
   of CSS3 and SCSS features to keep styles easily maintainable.
 
 ## How to run the services
-We provide you with Makefile rules for you to lift individual services:
+We provide you with Makefile rules for you to lift both services or individual ones.
+> By default the new `docker compose` api is used. In case that you are using an older version of Docker compose, you
+may override the command when invoking make:
+```bash
+# This would start the services using "docker-compose" instead of "docker compose"
+DOCKER_COMPOSE="docker-compose" make start -e
+```
+
+- Both the back-end and front-end can be started and stopped using the Makefile targets:
+     - `start` Starts both the API and web app in the background.
+     - `stop` Stops services running in the background.
+     - `build` Uses Docker to build the images for each service.
+
 - The _services/api_ directory holds the code for the API. The following make commands are available:
      - `backend-build` Builds the corresponding Docker images.
      - `backend-up` Raises the platform.
      - `backend-down` Shuts down the platform. _Requires having the platform up (you can use make backend-up)_
      
 - The _services/front-end_ directory holds the code for the Front-end. The following make commands are available:
-     - `frontend-build` Builds the corresponding app dist files.
-     - `frontend-dev` Runs the front-end service locally (accessible at http://localhost:4200). _It will install the dependencies (requires having a local installation of node)._
+     - `frontend-build` Builds the corresponding docker image.
+     - `frontend-up` Runs the front-end service locally (accessible at http://localhost:4200). _It will install the dependencies (requires having a local installation of node)._
+     - `frontend-down` Stops the front-end container.
 
 ## Data
 Data sample was obtained from https://www.reddit.com/r/linux.json
