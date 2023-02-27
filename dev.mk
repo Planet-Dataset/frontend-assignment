@@ -9,4 +9,4 @@ start:
 stop:
 	${DOCKER_COMPOSE} down
 
-$PHONY: dev
+$PHONY: build start stop
