@@ -1,11 +1,11 @@
 backend-build:
-	docker compose build
+	${DOCKER_COMPOSE} build api
 
 backend-up:
-	docker compose up
+	${DOCKER_COMPOSE} up api
 
 backend-down:
-	docker compose down
+	${DOCKER_COMPOSE} down api
 
 
 $PHONY: backend-build backend-up backend-down
