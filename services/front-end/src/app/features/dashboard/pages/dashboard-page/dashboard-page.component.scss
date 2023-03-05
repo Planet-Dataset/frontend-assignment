@@ -1,0 +1,41 @@
+@use 'theme';
+
+.landingPage {
+    margin-top: var(--space-large);
+
+    h1 {
+        @include theme.font-h1();
+    }
+
+    button {
+        p {
+            margin-bottom: 0px;
+            color: white;
+        }
+    }
+
+    #new {
+        background-color: var(--color-secondary);
+        color: white;
+    }
+    
+    #localization {
+        background-color: var(--color-blue);
+        color: white;
+        border-radius: 15px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: row;
+        .mat-form-field {
+            margin-inline: 15px;
+        }
+    
+        button {
+            background-color: var(--color-primary);
+            color: white;
+        }
+    }
+}
+

@@ -1,0 +1,44 @@
+<mat-grid-list cols="4" rowHeight="50px">
+  <mat-grid-tile colspan="2">
+    <h1 mat-dialog-title>Create translation for post</h1>
+  </mat-grid-tile>
+  <mat-grid-tile colspan="1"></mat-grid-tile>
+  <mat-grid-tile colspan="1">
+    <mat-icon mat-dialog-close aria-hidden="false" fontIcon="close"></mat-icon>
+  </mat-grid-tile>
+</mat-grid-list>
+
+<form [formGroup]="form">
+  <div mat-dialog-content id="content">
+    <mat-form-field appearance="fill">
+      <mat-label>Title</mat-label>
+      <input matInput formControlName="title" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Author</mat-label>
+      <input matInput formControlName="author" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Author fullname</mat-label>
+      <input matInput formControlName="author_fullname" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Category</mat-label>
+      <input matInput formControlName="category" />
+    </mat-form-field>
+    <mat-form-field appearance="fill">
+      <mat-label>Language</mat-label>
+      <mat-select formControlName="language">
+        <mat-option *ngFor="let lan of languages" [value]="lan">{{
+          lan
+        }}</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <p *ngIf="error !== ''" id="error">Error: {{ error }}</p>
+  </div>
+  <div mat-dialog-actions>
+    <button mat-raised-button id="new" (click)="addTranslation()">
+      Add translation
+    </button>
+  </div>
+</form>

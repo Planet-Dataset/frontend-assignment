@@ -1,1 +1,12 @@
-{}
+{
+    "landingPage": {
+        "content": {
+            "title": "# Publicaciones",
+            "filterLimit": "Limite",
+            "filterPage": "Pagina",
+            "button": "Filtrar",
+            "addTranslation": "Añadir traduccion",
+            "localization": "Localizado"
+        }
+    }
+}
