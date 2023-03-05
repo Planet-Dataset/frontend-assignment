@@ -1,1 +1,59 @@
-<p>dashboard-page works!</p>
+<!-- <h1>Posts</h1> -->
+<div class="landingPage" *transloco="let t; read: 'dashboard.landingPage'">
+  <p [innerHTML]="t('content.title') | markdown"></p>
+
+  <form [formGroup]="form">
+    <div mat-dialog-content>
+      <mat-form-field appearance="fill">
+        <mat-label [innerHTML]="t('content.filterLimit') | markdown"
+          >Limit</mat-label
+        >
+        <input type="number" matInput formControlName="limit" />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label [innerHTML]="t('content.filterPage') | markdown"
+          >Pages</mat-label
+        >
+        <input type="number" matInput formControlName="page" />
+      </mat-form-field>
+    </div>
+    <div mat-dialog-actions>
+      <button
+        mat-raised-button
+        (click)="filter()"
+        [innerHTML]="t('content.button')"
+      ></button>
+    </div>
+  </form>
+
+  <mat-grid-list cols="3" gutterSize="15">
+    <mat-grid-tile *ngFor="let post of posts">
+      <mat-card class="example-card">
+        <mat-card-title>{{ post.data.author }}</mat-card-title>
+        <mat-card-content>
+          <p>Title: {{ post.data.title }}</p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button
+            *ngIf="!post.data.original_post_id"
+            mat-raised-button
+            id="new"
+            (click)="addTranslation(post)"
+            [innerHTML]="t('content.addTranslation')"
+          >
+            Add translation
+          </button>
+          <button
+            *ngIf="post.data.original_post_id"
+            mat-raised-button
+            id="localization"
+            [disabled]="true"
+            [innerHTML]="t('content.localization')"
+          >
+            Localization
+          </button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>

@@ -1,1 +1,12 @@
-{}
+{
+    "landingPage": {
+        "content": {
+            "title": "# Posts",
+            "filterLimit": "Limit",
+            "filterPage": "Page",
+            "button": "Filter",
+            "addTranslation": "Add translation",
+            "localization": "Localization"
+        }
+    }
+}
